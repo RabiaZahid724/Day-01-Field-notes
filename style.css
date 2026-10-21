@@ -1,10 +1,9 @@
 :root {
     --overall-fontf: 'Times New Roman', Times, serif;
-    --blue-fontf: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --brown-fontf: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
-    --color: #0f0828;
-    --blue-color: rgb(2, 64, 119);
-    --box-color: rgb(228, 220, 141);
+    --color: #193632;
+    --brown-color: #A95738;
 
     --font-s: small;
     --font-w: 700;
@@ -14,7 +13,7 @@
     --space-md: 2rem;
     --space-lg: 4rem;
 
-    --l-height: 1.7;
+    --l-height: 1.6;
 
     --b-radius: 0.6rem;
 }
@@ -28,6 +27,7 @@ body{
     width: 100%;
     min-width: 0;
     font-family: var(--overall-fontf);
+    background-color: #F8F5EC;
     color: var(--color);
     line-height: var(--l-height);
 }
@@ -50,32 +50,71 @@ p {
     max-width: 70ch;
 }
 
-.nav-bar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
-    padding: 0.5rem;
+header{
+    margin-bottom: 1rem;
 }
 
-.field-head{
-    flex: 1 1 45%;
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
     min-width: 0;
 }
 
+.nav-field{
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    min-width: 0;
+    padding: 0;
+}
+
+.nav-para{
+    display: flex;
+    gap: var(--space-lg);
+    padding: 0;
+}
+
+.nav-search{
+    display: flex;
+    height: auto;
+    min-width: 0;
+    width: 23rem;
+}
+
+.search{
+    padding: 0.6rem;
+    flex: 1 1 90%;
+    flex-wrap: 1 1 auto;
+    border: 0;
+    border-top-left-radius: var(--b-radius);
+    border-bottom-left-radius: var(--b-radius);
+}
+
+.logo1{
+    font-size: 2.7rem;
+}
+
+.logo2{
+    background-color: var(--brown-color);
+    display: flex;
+    align-items: center;
+    flex: 1 1 10%;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-top-right-radius: var(--b-radius);
+    border-bottom-right-radius: var(--b-radius);
+}
+
 .link-h{
-   font-weight: var(--font-wl);  
+   font-weight: var(--font-w);  
    color: var(--color); 
 }
 
 .link-h:hover{
-    color: var(--blue-color);
+    color: var(--brown-color);
     font-weight: var(--font-w);
-}
-
-hr {
-    margin: var(--space-s);
 }
 
 main{
@@ -95,9 +134,13 @@ article{
     margin-bottom: 1.5rem;
 }
 
-.blue{
-    color: var(--blue-color);
-    font-family: var(--blue-fontf);
+.brown{
+    color: var(--brown-color);
+    font-family: var(--brown-fontf);
+}
+
+.margin-tra{
+    margin-bottom: 0.4rem;
 }
 
 .underl {
@@ -119,18 +162,21 @@ article{
 }
 
 img:hover{
-    border: 1px solid var(--color);
+    border: 0.2rem solid var(--brown-color);
 }
 
 .boxes{
-    background-color: var(--box-color);
+    border-bottom: 0.2rem solid #A95738 ;
     border-radius: var(--b-radius);
     padding: 1.3cap;
 }
 
 .quote{
-    border-left: 0.19rem solid rgb(2, 64, 119);
+    background-color: #F3E7DA;
+    border-radius: var(--b-radius);
+    border-left: 0.19rem solid var(--brown-color);
     padding-left: var(--space-s);
+    margin-block: 1rem;
 }
 
 .style{
@@ -141,7 +187,8 @@ img:hover{
 .side{
     flex: 0 1 30%;
     min-width: 0;
-    border-left: 0.09rem solid #0f0828;
+    border-radius: var(--b-radius);
+    border-left: 0.2rem solid var(--brown-color);
     padding-left: var(--space-s);
 }
 
@@ -162,7 +209,7 @@ img:hover{
 
 .link-decor{
     text-decoration: none;
-    color: var(--blue-color);
+    color: var(--brown-color);
 }
 
 .link-decor:hover{
@@ -177,20 +224,23 @@ img:hover{
     min-width: 0;
     gap: var(--space-md);
     padding: var(--space-md) var(--space-lg);
+    border-top: 0.2rem solid #A95738;
 }
 
 @media (max-width: 375px) {
-    .field-head {
+
+    .nav-field, 
+    .nav-para {
         flex-basis: 100%;
         text-align: center;
     }
 
+    .nav-field h1 {
+        font-size: 1.6rem;
+    }
+    
     main {
         padding-inline: 0.75rem;
-    }
-
-    .field-head h1 {
-        font-size: 1.6rem;
     }
 
     .foot {
@@ -213,7 +263,7 @@ img:hover{
 
     .side {
         border-left: none;
-        border-top: 1px solid var(--color);
+        border-top: 0.2rem solid var(--brown-color);
         padding-left: 0;
         padding-top: var(--space-md);
     }
