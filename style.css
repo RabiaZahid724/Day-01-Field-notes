@@ -5,7 +5,11 @@
     --color: #193632;
     --brown-color: #A95738;
 
-    --font-s: small;
+    --font-s1: 0.85rem;
+    --font-s2: 1.2rem;
+    --font-s3: 1.6rem;
+    --font-s4: 2.7rem;
+
     --font-w: 700;
     --font-wl: 500;
 
@@ -44,9 +48,7 @@ h2,
 h3,
 p {
     overflow-wrap: break-word;
-}
-
-p {
+    display: inline-block;
     max-width: 70ch;
 }
 
@@ -73,7 +75,7 @@ header{
 .nav-para{
     display: flex;
     gap: var(--space-lg);
-    padding: 0;
+    padding: 0.6rem;
 }
 
 .nav-search{
@@ -81,19 +83,24 @@ header{
     height: auto;
     min-width: 0;
     width: 23rem;
+    border-radius: 0.9rem;
 }
 
+.nav-search:hover{
+    border: 0.2rem solid var(--brown-color);
+}
 .search{
     padding: 0.6rem;
     flex: 1 1 90%;
     flex-wrap: 1 1 auto;
-    border: 0;
+    border: none;
+    outline: none;
     border-top-left-radius: var(--b-radius);
     border-bottom-left-radius: var(--b-radius);
 }
 
 .logo1{
-    font-size: 2.7rem;
+    font-size: var(--font-s4);
 }
 
 .logo2{
@@ -101,8 +108,9 @@ header{
     display: flex;
     align-items: center;
     flex: 1 1 10%;
-    font-size: 1.2rem;
+    font-size: var(--font-s2);
     padding: 0.5rem;
+    border: none;
     border-top-right-radius: var(--b-radius);
     border-bottom-right-radius: var(--b-radius);
 }
@@ -121,7 +129,7 @@ main{
     width: 100%;
     display: flex;
     align-items: flex-start;
-    padding-inline: var(--space-md);
+    padding-inline: 2rem;
 }
 
 article{
@@ -139,7 +147,7 @@ article{
     font-family: var(--brown-fontf);
 }
 
-.margin-tra{
+.margin{
     margin-bottom: 0.4rem;
 }
 
@@ -158,10 +166,10 @@ article{
 }
 
 .figcap{
-    font-size: var(--font-s);
+    font-size: var(--font-s1);
 }
 
-img:hover{
+img:hover{ 
     border: 0.2rem solid var(--brown-color);
 }
 
@@ -207,6 +215,16 @@ img:hover{
     object-fit: cover;
 }
 
+.s-para1{
+    font-size: var(--font-s2);
+    font-weight: var(--font-w);
+}
+
+.s-para2{
+    display: inline-block;
+    max-width: 25ch;
+}
+
 .link-decor{
     text-decoration: none;
     color: var(--brown-color);
@@ -220,11 +238,10 @@ img:hover{
 .foot{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     min-width: 0;
-    gap: var(--space-md);
     padding: var(--space-md) var(--space-lg);
     border-top: 0.2rem solid #A95738;
+    text-align: center;
 }
 
 @media (max-width: 375px) {
@@ -235,18 +252,17 @@ img:hover{
         text-align: center;
     }
 
+    .nav-para{
+        margin-top: 1rem;
+    }
     .nav-field h1 {
-        font-size: 1.6rem;
+        font-size: var(--font-s);
     }
     
     main {
         padding-inline: 0.75rem;
     }
 
-    .foot {
-        justify-content: center;
-        text-align: center;
-    }
 }
 
 @media (max-width: 768px) {
