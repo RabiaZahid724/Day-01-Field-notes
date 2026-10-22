@@ -185,6 +185,7 @@ img:hover{
     border-left: 0.19rem solid var(--brown-color);
     padding-left: var(--space-s);
     margin-block: 1rem;
+    padding: 1rem;
 }
 
 .style{
